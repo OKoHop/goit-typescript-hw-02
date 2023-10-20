@@ -5,18 +5,15 @@
 type page = {
   title: string;
   likes: number;
-  accounts: [];
+  accounts: string[];
   status: "open" | "close";
-};
-
-type details = {
-  details: {
-    createAt: string;
-    updateAt: string;
+  details?: {
+    createAt: Date;
+    updateAt: Date;
   };
 };
 
-const page1 = {
+const page1: page = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],

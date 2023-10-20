@@ -4,23 +4,28 @@
 */
 
 const enum Day {
-  num = 2,
+  Monday = 1,
+  Tuesday = 2,
+  Wednesday = 3,
+  Thursday = 4,
+  Friday = 5,
+  Saturday = 6,
+  Sunday = 7,
 }
 
-function isWeekend(day: number): boolean {
-  if (day >= 1 && day <= 5) {
-    return true;
-  } else {
+function isWeekend(day: Day): boolean {
+  if (day <= 5) {
     return false;
   }
+  return true;
 }
 
-let data = isWeekend(Day.num);
+let weekend = isWeekend(Day.Monday);
 
-if (data) {
-  console.log("Working day!");
+if (!weekend) {
+  console.log("This is work day");
 } else {
-  console.log("This is weelend!");
+  console.log("This is weekend");
 }
 
 export {};
